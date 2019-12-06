@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import ListGroup from "./common/listGroup";
 import Pagination from "./common/pagination";
 import { getMovies } from "../services/fakeMovieService";
-import { getGenres } from "../services/genreService";
+import { getGenres } from "../services/fakeGenreService";
 import { paginate } from "../utils/paginate";
 import MoviesTable from "./moviesTable";
 import _ from "lodash";
@@ -16,12 +16,12 @@ class Movies extends Component {
     pageSize: 4,
     currentPage: 1,
     searchQuery: "",
-    selectedGenre: null,
+    selectedGenre: "",
     sortColumn: { path: "title", order: "asc" }
   };
 
   async componentDidMount() {
-    const { data } = await getGenres();
+    const data  = await getGenres();
     const genres = [{ _id: "", name: "All Genres" }, ...data];
     this.setState({ movies: getMovies(), genres });
   }
@@ -88,7 +88,7 @@ class Movies extends Component {
     const { length: count } = this.state.movies;
     const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
 
-    if (count === 0) return <p>There are not movies in the database</p>;
+    if (count === 0) return <p>There are no movies in the database</p>;
 
     const { totalCount, data: movies } = this.getPagedData();
 
