@@ -19,7 +19,8 @@ class LoginForm extends Form {
       .label("Password")
   };
   doSubmit = () => {
-    // Call the server
+    const { username } = this.state.data;
+    alert("Hello " + username + "You will be logged in when connected to backend. Cheers" );
     console.log("Submitted");
   };
   render() {

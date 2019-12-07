@@ -3,7 +3,7 @@ import TableBody from "./tableBody";
 import TableHeader from "./tableHeader";
 const Table = ({ columns, sortColumn, onSort, data }) => {
   return (
-    <table className="table">
+    <table className="table table-hover">
       <TableHeader columns={columns} sortColumn={sortColumn} onSort={onSort} />
       <TableBody data={data} columns={columns} />
     </table>

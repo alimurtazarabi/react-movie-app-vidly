@@ -9,7 +9,8 @@ class RegisterForm extends Form {
       password: "",
       name: ""
     },
-    errors: {}
+    errors: {},
+    show: false
   };
   schema = {
     username: Joi.string()
@@ -25,7 +26,8 @@ class RegisterForm extends Form {
       .label("Name")
   };
   doSubmit = () => {
-    // Call the server
+    const { name, username } = this.state.data;
+    alert("Hello! " + name + " You been registered Successfully with email: " + username);
     console.log("Submitted");
   };
   render() {

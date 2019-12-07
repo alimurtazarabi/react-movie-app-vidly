@@ -3,9 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <Link className="navbar-brand" to="/">
-        Vidly Movies
+        Awein Movies
       </Link>
       <button
         className="navbar-toggler"
@@ -25,16 +25,16 @@ const NavBar = () => {
               Movies
             </NavLink>
           </li>
-          <li className="nav-item">
+          {/*<li className="nav-item">
             <NavLink className="nav-link" to="/customers">
               Customers
             </NavLink>
-          </li>
-          <li className="nav-item">
+          </li>*/}
+          {/*<li className="nav-item">
             <NavLink className="nav-link" to="/rentals">
               Rentals
             </NavLink>
-          </li>
+          </li>*/}
           <li className="nav-item">
             <NavLink className="nav-link" to="/login">
               login

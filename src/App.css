@@ -1,0 +1,15 @@
+body { 
+	background-color: #eee !important;
+}
+
+.page-item.active .page-link {
+	background-color: #212529 !important;
+	border-color: #32383e !important;
+}
+.list-group-item.active {
+	background-color: #212529 !important;
+	border-color: #32383e !important;
+}
+.list-group-item:hover {
+	cursor: pointer;
+}

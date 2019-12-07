@@ -94,7 +94,7 @@ class Movies extends Component {
 
     return (
       <div className="row">
-        <div className="col-3">
+        <div className="col-sm-12 col-lg-3 mb-3">
           <ListGroup
             items={this.state.genres}
             selectedItem={this.state.selectedGenre}
@@ -104,10 +104,10 @@ class Movies extends Component {
         <div className="col">
           <Link
             to="/movies/new"
-            className="btn btn-primary"
+            className="btn btn-outline-dark"
             style={{ marginBottom: 20 }}
           >
-            New Movie
+            Add New Movie
           </Link>
           <p>Showing {totalCount} movies in the database.</p>
           <SearchBox value={searchQuery} onChange={this.handleSearch} />

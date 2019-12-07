@@ -2,10 +2,22 @@ body {
   margin: 0;
   padding: 0 0 0 0;
   font-family: sans-serif;
+  background-color: #eee;
 }
 .navbar {
   margin-bottom: 30px;
 }
 .clickable {
   cursor: pointer;
+}
+.page-item.active .page-link {
+	background-color: #212529;
+	border-color: #32383e;
+}
+.list-group-item.active {
+	background-color: #212529;
+	border-color: #32383e;
+}
+.list-group-item:hover {
+	cursor: pointer;
 }
