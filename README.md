@@ -1,1 +1,8 @@
-Vidly Movie Application in React.js
+Sample React Application includes:
+
+> Pagination
+> Sorting
+> Search
+> Add
+> Delete
+> Category Filter
